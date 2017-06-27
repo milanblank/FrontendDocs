@@ -257,3 +257,8 @@ function filter() {
     }
     showList();
 }
+
+function onMouseOver() {
+    document.getElementById("chuck").style.visibility="visible";
+    document.getElementById("chuck").style.position="absolute";
+}
