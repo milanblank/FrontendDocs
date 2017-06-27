@@ -2,3 +2,15 @@
     text-align: center;
     color: #330099;
 }
+
+.main-title {
+    color: red;
+}
+
+.custom-title {
+    color: green;
+}
+
+.btn-default {
+    color: lightgreen;
+}
