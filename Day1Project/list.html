@@ -23,10 +23,15 @@
             <div id="listcontainer">
 
             </div>
+            <div>
+                <p>
+                    <button onclick="sumSalaries()">Salary total</button>
+                </p>
+            </div>
+            <div id="salaryCal">
+
+            </div>
         </div>
-    </div>
-    <div>
-        <a href="index.html">Back to Home Page</a>
     </div>
     <div class="panel panel-default">
         <div class="panel-heading description">
@@ -43,13 +48,19 @@
                 Phone: <input type="text" id="phone"/>
             </p>
             <p>
-                Salary: <input type="text" id="salary"/>
+                Salary: <input type="number" id="salary"/>
             </p>
             <p>
                 <button onclick="addEmployee()">Add employee</button>
             </p>
+            <p>
+                <button onclick="deleteLastEmployee()">Delete last employee</button>
+            </p>
 
         </div>
+    </div>
+    <div>
+        <a href="index.html">Back to Home Page</a>
     </div>
 </body>
 </html>
