@@ -10,6 +10,14 @@
 </head>
 <body>
     <h1>HR Employees List Page</h1>
+    <div class="parent">
+        <div class="overlap">
+
+        </div>
+        <div>
+            <img src="chuck.jpg" class="chuck">
+        </div>
+    </div>
     <div class="panel panel-default">
         <div class="panel-heading  description">
             Employees list
@@ -55,6 +63,18 @@
             </p>
             <p>
                 <button onclick="deleteLastEmployee()">Delete last employee</button>
+            </p>
+            <p>
+                Sort by: <input type="number" id="sortBy"/>
+            </p>
+            <p>
+                <button onclick="sortBy()">Sort by</button>
+            </p>
+            <p>
+                Sort by: <input type="text" id="filter"/>
+            </p>
+            <p>
+                <button onclick="filter()">Filter</button>
             </p>
 
         </div>

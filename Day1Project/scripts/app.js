@@ -5,7 +5,7 @@ var employeesList = [
     {
         firstName: 'John',
         lastName: 'King',
-        phone: '0123456789',
+        phone: '3123456789',
         salary: 4500,
         salaryInEuro: 0
     },
@@ -19,14 +19,14 @@ var employeesList = [
     {
         firstName: 'Diana',
         lastName: 'Ross',
-        phone: '0123456789',
+        phone: '2123456789',
         salary: 4500,
         salaryInEuro: 0
     },
     {
         firstName: 'Mike',
         lastName: 'Bob',
-        phone: '0123456789',
+        phone: '1123456789',
         salary: 4500,
         salaryInEuro: 0
     },
@@ -187,4 +187,73 @@ function avarageSalary() {
     }
     sum = sum / nrRows;
     return sum;
+}
+
+function sortBy() {
+    var input = document.getElementById("sortBy").value;
+    if (input == 1){
+        for(i in employeesList){
+            for (j = i; j < employeesList.length; j++){
+                if(employeesList[i].firstName>employeesList[j].firstName){
+                    var aux = employeesList[i];
+                    employeesList[i] = employeesList[j];
+                    employeesList[j] = aux;
+                }
+            }
+        }
+    }
+    else if (input == 2) {
+        for(i in employeesList){
+            for (j = i; j < employeesList.length; j++){
+                if(employeesList[i].lastName>employeesList[j].lastName){
+                    var aux = employeesList[i];
+                    employeesList[i] = employeesList[j];
+                    employeesList[j] = aux;
+                }
+            }
+        }
+    } else if (input == 3) {
+        for(i in employeesList){
+            for (j = i; j < employeesList.length; j++){
+                if(employeesList[i].phone>employeesList[j].phone){
+                    var aux = employeesList[i];
+                    employeesList[i] = employeesList[j];
+                    employeesList[j] = aux;
+                }
+            }
+        }
+    } else if (input == 4) {
+        for(i in employeesList){
+            for (j = i; j < employeesList.length; j++){
+                if(employeesList[i].salary>employeesList[j].salary){
+                    var aux = employeesList[i];
+                    employeesList[i] = employeesList[j];
+                    employeesList[j] = aux;
+                }
+            }
+        }
+    }
+    showList();
+}
+
+function filter() {
+    var input = document.getElementById("filter").value;
+    var i = 0;
+    while (i < employeesList.length){
+        var myBool = 0;
+        if (employeesList[i].firstName == input){
+            myBool = 1;
+        } else if (employeesList[i].lastName == input){
+            myBool = 1;
+        } else if (employeesList[i].phone == input){
+            myBool = 1;
+        } else if (employeesList[i].salary == input){
+            myBool = 1;
+        }
+        if (myBool == 0){
+            deleteRow(i);
+        } else
+            i++;
+    }
+    showList();
 }
